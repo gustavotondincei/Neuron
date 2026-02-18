@@ -30,6 +30,10 @@ h1, h2, h3, h4, h5, h6, a, p, li {
   color: inherit;
 }
 
+input:focus, textarea:focus, select:focus, button:focus {
+  outline: none;
+}
+
 /* /css reset */
 /* components */
 /* btn components */
@@ -40,7 +44,7 @@ h1, h2, h3, h4, h5, h6, a, p, li {
   border-radius: 38px;
   background-color: var(--color-text);
   color: var(--color-light);
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .btn:hover {
@@ -56,7 +60,7 @@ h1, h2, h3, h4, h5, h6, a, p, li {
   background-color: var(--color-text);
   color: var(--color-light);
   gap: 0.625rem;
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .btn-text-arrow:hover {
@@ -72,7 +76,7 @@ h1, h2, h3, h4, h5, h6, a, p, li {
   align-items: center;
   background-color: var(--color-text);
   color: var(--color-light);
-  transition: 0.2s;
+  transition: 0.2s ease;
 }
 
 .btn-arrow:hover {
@@ -117,6 +121,7 @@ p, .body, input, select, label {
 a, .link, li {
   font: 500 0.9375rem var(--font-text);
   color: var(--color-text);
+  transition: 0.3s ease;
 }
 
 .link:hover {
@@ -214,9 +219,14 @@ select {
 }
 .header__menu li a {
   opacity: 0.5;
+  transition: 0.3s ease;
 }
 .header__menu .active {
   opacity: 1;
+}
+.header__menu a:hover:not(.active) {
+  opacity: 0.8;
+  text-decoration: underline;
 }
 @media (min-width: 720px) {
   .header__menu span {
@@ -396,7 +406,7 @@ select {
   flex-flow: column nowrap;
   padding: 2rem;
   gap: 3rem;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .pcard2 {
@@ -499,8 +509,14 @@ select {
   justify-content: center;
   gap: 1rem;
 }
-
-.form-privacy {
+#contact__form input[type=checkbox] {
+  height: 1rem;
+  width: auto;
+}
+#contact__form input:focus, #contact__form select:focus {
+  box-shadow: 0 0 0 1px black;
+}
+#contact__form .form-privacy {
   display: flex;
   flex-direction: row-reverse;
   justify-content: start;
@@ -508,13 +524,7 @@ select {
   gap: 1rem;
   padding-left: 6px;
 }
-
-input[type=checkbox] {
-  height: 1rem;
-  width: auto;
-}
-
-.form-row {
+#contact__form .form-row {
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -585,7 +595,12 @@ input[type=checkbox] {
   padding: clamp(1rem, 3vw, 2rem);
   gap: 2rem;
   border-radius: 5px;
-  transition: 0.3s;
+}
+.footer__block li {
+  transition: 0.3s ease;
+}
+.footer__block li:hover {
+  transform: scale(1.05);
 }
 
 .footer__logo {
@@ -607,9 +622,6 @@ input[type=checkbox] {
   list-style: none;
   gap: 1rem;
 }
-.footer__up li:hover {
-  transform: scale(1.1);
-}
 @media (max-width: 720px) {
   .footer__up img {
     flex: 1 1 18.75rem;
@@ -628,9 +640,6 @@ input[type=checkbox] {
 .footer__down a {
   color: var(--color-light);
   opacity: 80%;
-}
-.footer__down li:hover {
-  transform: scale(1.1);
 }
 
 /* /footer */
