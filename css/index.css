@@ -128,10 +128,15 @@ a, .link, li {
   display: flex;
   margin: 0 auto;
   max-width: var(--max-width-xl);
-  padding: clamp(1rem, 5vw, 2rem);
+  padding: clamp(1rem, 3vw, 2rem);
   justify-content: space-between;
+  align-items: center;
 }
-.header__logo {
+.header a {
+  display: flex;
+  align-items: center;
+}
+.header a__logo {
   border-radius: 0;
   width: 5.75rem;
 }
@@ -411,7 +416,7 @@ a, .link, li {
 }
 .prices__card:hover {
   transform: scale(1.01);
-  box-shadow: 0 5px 5px rgba(31, 31, 31, 0.3137254902);
+  box-shadow: 0 5px 5px var(--color-text-opacity);
 }
 .prices__card--dark {
   background-color: var(--color-text);
@@ -587,6 +592,12 @@ a, .link, li {
   flex-flow: row nowrap;
   gap: 1rem;
 }
+@media (max-width: 720px) {
+  .error__btns {
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+}
 .error__btn-outline {
   background-color: var(--color-light);
   color: var(--color-text);
@@ -652,7 +663,7 @@ a, .link, li {
 }
 .post-icon__card:hover {
   transform: scale(1.01);
-  box-shadow: 0 3px 3px rgba(31, 31, 31, 0.1254901961);
+  box-shadow: 0 3px 3px var(--color-text-opacity);
 }
 
 .post__block {
@@ -720,4 +731,26 @@ a, .link, li {
 .post__img picture, .post__img img {
   width: 100%;
   border-radius: 5px;
+}
+
+/* Page: Contact Icons--------------------------------------------------------- */
+.maintance {
+  display: flex;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+.maintance .__block {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  width: 100%;
+  gap: 1rem;
+}
+@media (max-width: 720px) {
+  .maintance .__block {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+  }
 }/*# sourceMappingURL=index.css.map */
