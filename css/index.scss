@@ -863,7 +863,7 @@ a, .link, li {
     margin: 0 auto;
     min-height: 100vh;
 
-    & .__block {
+    &__block {
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -876,9 +876,61 @@ a, .link, li {
             text-align: center;
             padding: 0;
         }
+
+        & #maintance__form {
+            display: flex;
+            flex-flow: row nowrap;
+            width: 100%;
+            gap: 1rem;
+
+
+            & input[type="text"] {
+                padding: 1rem 1.1875rem;
+                border-radius: 100px;
+                background-color: var(--color-light);
+                color: var(--color-text);
+                border: 1px solid transparent;
+                flex: 1;
+
+                &:focus{
+                    border: 1px solid #1f1f1f;
+                }
+            }
+            
+            & .submit-wrapper {
+                position: relative;
+
+                & input[type="submit"] {
+                    padding: 1rem 2.5rem 1rem 2rem;
+                    border-radius: 100px;
+                    background-color: var(--color-primary);
+                    color: var(--color-light);
+                    border: 1px solid transparent;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: var(--color-primary-opacity);
+                    }
+                }
+
+                & .micon {
+                    position: absolute;
+                    top: 50%;
+                    right: 1rem;
+                    transform: translateY(-50%);
+                    color: var(--color-light);
+                    display: flex;
+                    align-items: center;
+
+                    & .material-symbols-outlined {
+                        font-size: 1.1rem;
+                    }
+                }
+            }
+        }
     }
 
-    & .__form {
-
-    }
+    
 }
+
+

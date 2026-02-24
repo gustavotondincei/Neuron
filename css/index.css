@@ -739,7 +739,7 @@ a, .link, li {
   margin: 0 auto;
   min-height: 100vh;
 }
-.maintance .__block {
+.maintance__block {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -748,9 +748,52 @@ a, .link, li {
   gap: 1rem;
 }
 @media (max-width: 720px) {
-  .maintance .__block {
+  .maintance__block {
     align-items: center;
     text-align: center;
     padding: 0;
   }
+}
+.maintance__block #maintance__form {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  gap: 1rem;
+}
+.maintance__block #maintance__form input[type=text] {
+  padding: 1rem 1.1875rem;
+  border-radius: 100px;
+  background-color: var(--color-light);
+  color: var(--color-text);
+  border: 1px solid transparent;
+  flex: 1;
+}
+.maintance__block #maintance__form input[type=text]:focus {
+  border: 1px solid #1f1f1f;
+}
+.maintance__block #maintance__form .submit-wrapper {
+  position: relative;
+}
+.maintance__block #maintance__form .submit-wrapper input[type=submit] {
+  padding: 1rem 2.5rem 1rem 2rem;
+  border-radius: 100px;
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  border: 1px solid transparent;
+  transition: 0.3s;
+}
+.maintance__block #maintance__form .submit-wrapper input[type=submit]:hover {
+  background-color: var(--color-primary-opacity);
+}
+.maintance__block #maintance__form .submit-wrapper .micon {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  color: var(--color-light);
+  display: flex;
+  align-items: center;
+}
+.maintance__block #maintance__form .submit-wrapper .micon .material-symbols-outlined {
+  font-size: 1.1rem;
 }/*# sourceMappingURL=index.css.map */
