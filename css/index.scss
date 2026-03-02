@@ -133,15 +133,18 @@ a, .link, li {
             background-color: var(--color-primary-opacity); 
         }
     }
-}
 
-.--arrow {
-    padding: .625rem;
+        
+    &--arrow {
+        padding: .625rem;
 
-    &:hover { 
-        background-color: var(--color-text-opacity); 
+        &:hover {
+            background-color: var(--color-text-opacity);
+        }   
     }
 }
+
+
 
 
 
@@ -169,11 +172,11 @@ a, .link, li {
     & a {
         display: flex;
         align-items: center;
-
-        &__logo {
-            border-radius: 0;
-            width: 5.75rem;
-        }
+    }
+    
+    &__logo {
+        border-radius: 0;
+        width: 5.75rem;
     }
 
     &__menu {
@@ -343,8 +346,7 @@ a, .link, li {
 }
 
 
-/* Hero Double-------
--------------------------------------------------- */
+/* Hero Double--------------------------------------------------------- */
 
 .hero-double {
     &__block {

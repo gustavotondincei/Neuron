@@ -117,11 +117,10 @@ a, .link, li {
 .btn--submit:hover {
   background-color: var(--color-primary-opacity);
 }
-
-.--arrow {
+.btn--arrow {
   padding: 0.625rem;
 }
-.--arrow:hover {
+.btn--arrow:hover {
   background-color: var(--color-text-opacity);
 }
 
@@ -147,7 +146,7 @@ a, .link, li {
   display: flex;
   align-items: center;
 }
-.header a__logo {
+.header__logo {
   border-radius: 0;
   width: 5.75rem;
 }
