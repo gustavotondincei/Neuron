@@ -169,9 +169,15 @@ a, .link, li {
     justify-content: space-between;
     align-items: center;
 
-    & a {
+    &__menu-btn {
         display: flex;
         align-items: center;
+        background: none;
+        border: none;
+
+        @media (min-width: 720px) { 
+            display: none; 
+        }
     }
     
     &__logo {
@@ -184,8 +190,24 @@ a, .link, li {
             display: flex;
             list-style: none;
             gap: 2rem;
+            position: relative;
 
-            @media (max-width: 720px) { display: none; }
+            & .btn-x {
+                display: none;
+                border: none;
+                background: none; 
+
+                @media (max-width: 720px) {
+                    display: block;
+                    position: absolute;
+                    right: 2rem;
+                    top: 0;
+                }
+            }
+
+            @media (max-width: 720px) { 
+                display: none; 
+            }
         }
 
         & li {
@@ -197,16 +219,41 @@ a, .link, li {
             }
         }
 
-        & .active { opacity: 1; }
+        & .active { 
+            opacity: 1; 
+        }
 
         & a:hover:not(.active) {
             opacity: 0.8;
             text-decoration: underline;
         }
+    }
 
-        & span {
-            @media (min-width: 720px) { display: none; }
+    & .activeMenu {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: start;
+
+        background-color: white;
+        height: 100vh;
+        width: 100vw;
+
+        list-style: none;
+        padding: 0 4rem;
+        gap: 2rem;
+        
+        & li {
+
+            & a {
+                font-family: var(--font-titles);
+                font-size: 1.5rem;
+            }
         }
+    }
+
+    & .activeBtn {
+        display: none;
     }
 }
 

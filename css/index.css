@@ -142,9 +142,16 @@ a, .link, li {
   justify-content: space-between;
   align-items: center;
 }
-.header a {
+.header__menu-btn {
   display: flex;
   align-items: center;
+  background: none;
+  border: none;
+}
+@media (min-width: 720px) {
+  .header__menu-btn {
+    display: none;
+  }
 }
 .header__logo {
   border-radius: 0;
@@ -154,6 +161,20 @@ a, .link, li {
   display: flex;
   list-style: none;
   gap: 2rem;
+  position: relative;
+}
+.header__menu ul .btn-x {
+  display: none;
+  border: none;
+  background: none;
+}
+@media (max-width: 720px) {
+  .header__menu ul .btn-x {
+    display: block;
+    position: absolute;
+    right: 2rem;
+    top: 0;
+  }
 }
 @media (max-width: 720px) {
   .header__menu ul {
@@ -174,10 +195,24 @@ a, .link, li {
   opacity: 0.8;
   text-decoration: underline;
 }
-@media (min-width: 720px) {
-  .header__menu span {
-    display: none;
-  }
+.header .activeMenu {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: start;
+  background-color: white;
+  height: 100vh;
+  width: 100vw;
+  list-style: none;
+  padding: 0 4rem;
+  gap: 2rem;
+}
+.header .activeMenu li a {
+  font-family: var(--font-titles);
+  font-size: 1.5rem;
+}
+.header .activeBtn {
+  display: none;
 }
 
 /* Sub-banner--------------------------------------------------------- */
@@ -298,8 +333,7 @@ a, .link, li {
   color: var(--color-light);
 }
 
-/* Hero Double-------
--------------------------------------------------- */
+/* Hero Double--------------------------------------------------------- */
 .hero-double__block {
   display: flex;
   flex-flow: row wrap;
